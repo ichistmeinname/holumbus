@@ -1,5 +1,0 @@
-cabal.sandbox.config
-dist
-cache/
-tmp/
-json/
