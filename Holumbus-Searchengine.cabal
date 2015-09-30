@@ -142,30 +142,3 @@ library
   other-extensions:
                 DeriveDataTypeable
               , BangPatterns
-
-
-
-test-suite strict
-  type:          exitcode-stdio-1.0
-  main-is:       IndexStrict.hs
-
-  if !flag(test-strict)
-    buildable: False
-  else
-    build-depends:
-                Holumbus-Searchengine
-              , base
-              , bytestring                  == 0.10.0.2
-              , containers
-              , data-stringmap
-              , deepseq
-              , HUnit                       >= 1.2
-              , QuickCheck                  >= 2.4
-              , test-framework              >= 0.6
-              , test-framework-quickcheck2  >= 0.2
-              , test-framework-hunit        >= 0.2
-              , ghc-heap-view               >= 0.5
-
-  ghc-options:    -Wall -fwarn-tabs
-
-  hs-source-dirs: tests
